@@ -2,19 +2,19 @@
 import * as React from 'react';
 import { css, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { PositionHeader, SearchEngineHeader, TotalHeader } from './constants';
-import { SearchResponseModel } from '../models/searchResponseModel';
+import { ISearchResponseModel } from '../models';
 
-interface SearchResultProps {
-  items: SearchResponseModel[]
+interface ISearchResultProps {
+  items: ISearchResponseModel[]
 }
 
-const styles = { 
-  headerLabel: css({ 
-      fontWeight: "bold" 
+const styles = {
+  headerLabel: css({
+    fontWeight: "bold"
   })
 };
 
-const SearchForm: React.FC<SearchResultProps> = ({
+const SearchResults: React.FC<ISearchResultProps> = ({
   items
 }) => {
   return (
@@ -46,4 +46,4 @@ const SearchForm: React.FC<SearchResultProps> = ({
   );
 }
 
-export default SearchForm;
+export default SearchResults;

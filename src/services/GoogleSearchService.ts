@@ -1,5 +1,5 @@
-import { SearchRequestModel } from "../models/searchRequestModel";
-import { SearchResponseModel } from "../models/searchResponseModel";
+import { ISearchRequestModel } from "../models/searchRequestModel";
+import { ISearchResponseModel } from "../models/searchResponseModel";
 import { environment } from "../config/enviroment";
 
 const API_BASE_URL = environment.SEO_ANALYZING_API_BASEURL;
@@ -8,8 +8,8 @@ export async function getGoogleSeoAnalyzing({
     searchQuery,
     searchUrl,
     searchLimit = 100,
-}: SearchRequestModel
-): Promise<SearchResponseModel> {
+}: ISearchRequestModel
+): Promise<ISearchResponseModel> {
     try {
         const response = await fetch(`${API_BASE_URL}/GoogleAnalyzing/Search?SearchQuery=${searchQuery}&SearchUrl=${searchUrl}&SearchLimit=${searchLimit}`);
 

@@ -10,7 +10,7 @@ import {
 import ErrorIcon from '@mui/icons-material/Error';
 import { BtnCloseLabel, MessageContent, MessageTitle } from './constants';
 
-interface SearchResultProps {
+interface ISearchResultProps {
     isOpen: boolean;
     onClose: () => void;
 }
@@ -45,7 +45,7 @@ const styles = {
     })
 };
 
-const ErrorMessageDialog: React.FC<SearchResultProps> = ({ isOpen, onClose })  => {
+const ErrorMessageDialog: React.FC<ISearchResultProps> = ({ isOpen, onClose })  => {
 
     return (
         <>

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Backdrop, CircularProgress } from '@mui/material';
 
-interface LoadingScreenProps {
+interface ILoadingScreenProps {
     isOpen: boolean;
 }
 
-const LoadingScreen: React.FC<LoadingScreenProps> = ({ isOpen }) => {
+const LoadingScreen: React.FC<ILoadingScreenProps> = ({ isOpen }) => {
   return (
     <>
       <Backdrop

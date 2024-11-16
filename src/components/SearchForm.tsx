@@ -2,9 +2,10 @@
 import React, { useState } from "react";
 import Grid from '@mui/material/Grid2';
 import { Button, css, TextField } from "@mui/material";
+import { validateSearchQuery, validateSearchUrl } from "../utils";
 import { BtnSearchLabel, SearchQueryLabel, SearchUrlLabel } from "./constants";
 
-interface SearchFormProps {
+interface ISearchFormProps {
   onSubmit: (keyword: string, targetUrl: string, limit: number) => void;
 }
 
@@ -21,34 +22,13 @@ const styles = {
   }),
 };
 
-const SearchForm: React.FC<SearchFormProps> = ({
+const SearchForm: React.FC<ISearchFormProps> = ({
   onSubmit,
 }) => {
   const [searchQuery, setSearchQuery] = useState("e-settlements");
   const [searchUrl, setSearchUrl] = useState("www.sympli.com.au");
   const [searchQueryError, setSearchQueryError] = useState('');
   const [searchUrlError, setSearchUrlError] = useState('');
-
-  const validateSearchQuery = (value: string) => {
-    if (!value) {
-      return "Search query is required.";
-    }
-    return "";
-  };
-
-  const validateSearchUrl = (value: string) => {
-    if (!value) {
-      return "Search url is required.";
-    }
-    const regexUrlValidationFormat = /^(?:(ftp|http|https)?:\/\/)?(?:[\w-]+\.)+([a-zA-Z0-9]){2,6}$/;
-    const regex = new RegExp(regexUrlValidationFormat);
-
-    if (!regex.test(value)) {
-      return "Invalid URL format.";
-    }
-
-    return "";
-  };
 
   const onSearchQueryChange = (value: string) => {
     const errorMessage = validateSearchQuery(value);

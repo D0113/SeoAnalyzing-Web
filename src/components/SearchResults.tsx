@@ -8,9 +8,9 @@ interface ISearchResultProps {
   items: ISearchResponseModel[]
 }
 
-const styles = { 
-  headerLabel: css({ 
-      fontWeight: "bold" 
+const styles = {
+  headerLabel: css({
+    fontWeight: "bold"
   })
 };
 

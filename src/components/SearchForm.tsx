@@ -84,10 +84,10 @@ const SearchForm: React.FC<ISearchFormProps> = ({
       </Grid>
       <Grid css={styles.btnSearchWrapper}>
         <Button css={styles.btnSearch}
-                disabled={!!searchQueryError || !!searchUrlError}
-                variant="contained" 
-                onClick={onSearchBtnClick}>
-            {BtnSearchLabel}
+          disabled={!!searchQueryError || !!searchUrlError}
+          variant="contained"
+          onClick={onSearchBtnClick}>
+          {BtnSearchLabel}
         </Button>
       </Grid>
     </Grid>

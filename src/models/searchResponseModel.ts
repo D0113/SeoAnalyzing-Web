@@ -1,5 +1,5 @@
 export interface ISearchResponseModel {
-    totalCount: number;
-    positions: string;
-    searchEngine: string;
-  }
+  totalCount: number;
+  positions: string;
+  searchEngine: string;
+}

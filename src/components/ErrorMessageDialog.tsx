@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import * as React from 'react';
-import { 
+import {
     css,
     Box,
     Button,
@@ -45,7 +45,7 @@ const styles = {
     })
 };
 
-const ErrorMessageDialog: React.FC<ISearchResultProps> = ({ isOpen, onClose })  => {
+const ErrorMessageDialog: React.FC<ISearchResultProps> = ({ isOpen, onClose }) => {
 
     return (
         <>

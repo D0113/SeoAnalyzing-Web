@@ -8,8 +8,7 @@ export async function getGoogleSeoAnalyzing({
     searchQuery,
     searchUrl,
     searchLimit = 100,
-}: ISearchRequestModel
-): Promise<ISearchResponseModel> {
+}: ISearchRequestModel): Promise<ISearchResponseModel> {
     try {
         const response = await fetch(`${API_BASE_URL}/GoogleAnalyzing/Search?SearchQuery=${searchQuery}&SearchUrl=${searchUrl}&SearchLimit=${searchLimit}`);
 

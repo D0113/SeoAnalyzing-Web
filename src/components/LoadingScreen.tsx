@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Backdrop, CircularProgress } from '@mui/material';
 
 interface ILoadingScreenProps {
-    isOpen: boolean;
+  isOpen: boolean;
 }
 
 const LoadingScreen: React.FC<ILoadingScreenProps> = ({ isOpen }) => {

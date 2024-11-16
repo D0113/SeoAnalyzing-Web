@@ -1,2 +1,2 @@
-export * from "./bingSearchServices";
-export * from "./googleSearchServices";
+export * from "./bingSearchService";
+export * from "./googleSearchService";

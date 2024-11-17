@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Enviroment settings
+Check the enviroment template in [.env.template](https://github.com/D0113/SeoAnalyzing-Web/blob/main/.env.template) file.\
+Create a enviroment file `.env`.
+
+Enviroment content example:\
+REACT_APP_SEO_ANALYZING_API_BASEURL=https://localhost:7212/api/v1
+
 ## Available Scripts
 
 In the project directory, you can run:
